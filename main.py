@@ -21,7 +21,7 @@ def home():
 def login():
     login_form = LoginForm()
     login_form.validate_on_submit()
-    return  render_template('login.html')
+    return render_template('login.html', form=login_form)
 
 if __name__ == '__main__':
     app.run(debug=True)
